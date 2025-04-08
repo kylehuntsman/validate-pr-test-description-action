@@ -15,7 +15,7 @@ async function run() {
 
   const body = pr.data?.body || '';
   if (!body) {
-    core.setFailed("PR description is empty");
+    core.setFailed("PR description is empty. Please see the PULL_REQUEST_TEMPLATE.md");
   }
 
   const lines = body.split('\n')
