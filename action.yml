@@ -1,0 +1,13 @@
+name: Validate Test Description
+description: Validates that a PR description describes how the changes in a PR have been tested
+inputs:
+  GITHUB_TOKEN:
+    description: The GitHub Actions GITHUB_TOKEN
+    default: ${{ github.token }}
+    required: false
+outputs:
+  valid: 
+    description: True if the PR description describes how the changes in the PR were tested, false otherwise
+runs:
+  using: node20
+  main: index.js
