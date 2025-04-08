@@ -1,0 +1,10 @@
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  validate-pr-test-description:
+    runs-on: ubuntu-latest
+    name: Validate PR Test Description
+    steps:
+      - uses: kylehuntsman/validate-pr-test-description-action@29a6d4a95112198558abe236ee2d0cc386ab8895
